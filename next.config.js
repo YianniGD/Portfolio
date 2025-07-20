@@ -2,6 +2,7 @@
 const nextConfig = {
   output: 'export', // Add this line for static HTML export
   images: {
+    unoptimized: true, // Add this line to disable image optimization
     remotePatterns: [
       {
         protocol: 'https',
