@@ -3,8 +3,8 @@ const nextConfig = {
   output: 'export',
   // Set the basePath to your repository name
   // This is crucial for GitHub Pages deployment
-  basePath: process.env.NODE_ENV === 'production' ? '/ArtFolio' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/ArtFolio/' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/portfolio/ '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/portfolio/' : '',
   images: {
     loader: 'custom',
     loaderFile: './src/lib/imageLoader.js',
