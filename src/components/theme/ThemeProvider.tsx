@@ -22,8 +22,8 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     let storedTheme: Theme | null = null;
     try {
       storedTheme = localStorage.getItem('theme') as Theme | null;
-    } catch (e) {
-      console.warn("Could not access localStorage for theme preference.");
+    } catch (_e) {
+      console.warn("Could not access localStorage for theme preference:", _e);
     }
     
     if (storedTheme && (storedTheme === 'light' || storedTheme === 'dark')) {
@@ -46,7 +46,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
     try {
       localStorage.setItem('theme', theme);
-    } catch (e) {
+    } catch (_e) {
       // localStorage might be unavailable
       console.warn("Could not save theme preference to localStorage.");
     }

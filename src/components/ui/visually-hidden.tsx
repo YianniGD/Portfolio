@@ -4,9 +4,10 @@
 import * as React from 'react';
 import { cn } from '@/lib/utils';
 
-interface VisuallyHiddenProps extends React.HTMLAttributes<HTMLSpanElement> {}
-
-const VisuallyHidden = React.forwardRef<HTMLSpanElement, VisuallyHiddenProps>(
+const VisuallyHidden = React.forwardRef<
+  HTMLSpanElement,
+  React.ComponentPropsWithoutRef<'span'>
+>(
   ({ className, ...props }, ref) => {
     return (
       <span
