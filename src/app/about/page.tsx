@@ -16,7 +16,7 @@ export default function AboutPage() {
       <div className="max-w-[18rem] mx-auto mb-8">
         <div className="relative aspect-square w-full overflow-hidden rounded-lg shadow-md bg-muted">
           <Image
-            src="/Images/portrait.webp"
+            src="/Portfolio/Images/portrait.webp"
             alt="Portrait of Yianni Galiatsatos"
             fill
             data-ai-hint="portrait person"

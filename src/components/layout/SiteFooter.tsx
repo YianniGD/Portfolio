@@ -26,13 +26,13 @@ export default function SiteFooter() {
         
         {/* Item 2: Navigation Links */}
         <nav className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-muted-foreground md:order-2 md:justify-start flex-1 md:mx-auto">
-          <a href="/about" className="hover:text-foreground transition-colors">
+          <a href="/Portfolio/about" className="hover:text-foreground transition-colors">
             About
           </a>
-          <a href="/style-guide" className="hover:text-foreground transition-colors">
+          <a href="/Portfolio/style-guide" className="hover:text-foreground transition-colors">
             Style Guide
           </a>
-          <a href="/" className="hover:text-foreground transition-colors">
+          <a href="/Portfolio/" className="hover:text-foreground transition-colors">
             Home
           </a>
         </nav>
@@ -102,7 +102,7 @@ export default function SiteFooter() {
               className="block relative h-full w-full transition-opacity hover:opacity-75"
             >
               <Image
-                src="/Images/cba-logo.svg"
+                src="/Portfolio/Images/cba-logo.svg"
                 alt="CBA Logo - Link to Colour Blind Awareness"
                 fill
                 sizes="56px"

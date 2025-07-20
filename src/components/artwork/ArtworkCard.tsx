@@ -5,18 +5,26 @@ import Image from 'next/image';
 import type { Artwork } from '@/types';
 import { Card } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
+import { useRouter } from 'next/navigation';
 
 interface ArtworkCardProps {
   artwork: Artwork;
 }
 
 function ArtworkCard({ artwork }: ArtworkCardProps) {
+  const router = useRouter();
   const plainTitle = artwork.title.replace(/<br \/>/g, ' ');
   const isSvg = typeof artwork.imageUrl === 'string' && (artwork.imageUrl.split('?')[0].endsWith('.svg'));
-  const isLocalImage = typeof artwork.imageUrl === 'string' && artwork.imageUrl.startsWith('/');
+  
+  // Adjusted to check for paths starting with `/Portfolio/`
+  const isLocalImage = typeof artwork.imageUrl === 'string' && artwork.imageUrl.startsWith('/Portfolio/');
+
+  // Correct the href for client-side navigation with basePath
+  const basePath = process.env.NODE_ENV === 'production' ? '/Portfolio' : '';
+  const href = `${basePath}/artworks/${artwork.id}`;
 
   return (
-    <a href={`/artworks/${artwork.id}`} aria-label={`View details for ${plainTitle}`} className="block group">
+    <a href={href} aria-label={`View details for ${plainTitle}`} className="block group">
       <Card className="relative overflow-hidden rounded-lg shadow-md transition-shadow duration-300 ease-in-out">
         {/* Image Layer */}
         <div className={cn(

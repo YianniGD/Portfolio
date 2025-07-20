@@ -30,7 +30,7 @@ export async function generateMetadata(
   const plainDescription = artwork.description.replace(/<br \/>/g, ' ');
   
   // Create a fully qualified URL for the image
-  const imageUrl = new URL(artwork.imageUrl, (await parent).metadataBase || undefined).toString();
+  const imageUrl = new URL(artwork.imageUrl.replace(/^\/Portfolio/, ''), (await parent).metadataBase || undefined).toString();
 
   return {
     title: `${plainTitle} | YGDesign`,

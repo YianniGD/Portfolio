@@ -6,7 +6,7 @@ import type { Artwork } from '../types';
 const durgaTeaBranding: Artwork = {
   id: '3',
   title: 'Durga Tea Company',
-  imageUrl: '/Images/D-01.webp',
+  imageUrl: '/Portfolio/Images/D-01.webp',
   imageWidth: 1000,
   imageHeight: 750,
   description: "Brand identity guidelines for 'Durga Tea', a conceptual tea company. This project explores the visual identity, color palettes, typography, and packaging concepts inspired by the strength, serenity, and symbolism associated with the deity Durga. The aim is to create a brand that evokes warmth, power, and tranquility, reflecting the essence of both the tea and its divine namesake.",
@@ -19,25 +19,25 @@ const durgaTeaBranding: Artwork = {
   dataAiHint: 'tea branding mockup',
   showMotifSwitcher: true,
   interactiveDisplay: {
-    contentImageUrl: '/Images/D-11.webp'
+    contentImageUrl: '/Portfolio/Images/D-11.webp'
   },
   additionalImageUrls: [
-    '/Images/D-02.webp',
-    '/Images/D-03.webp',
-    '/Images/D-04.webp',
-    '/Images/D-05.webp',
-    '/Images/D-06.webp',
-    '/Images/D-07.webp',
-    '/Images/D-08.webp',
-    '/Images/D-09.webp',
-    '/Images/D-10.webp'
+    '/Portfolio/Images/D-02.webp',
+    '/Portfolio/Images/D-03.webp',
+    '/Portfolio/Images/D-04.webp',
+    '/Portfolio/Images/D-05.webp',
+    '/Portfolio/Images/D-06.webp',
+    '/Portfolio/Images/D-07.webp',
+    '/Portfolio/Images/D-08.webp',
+    '/Portfolio/Images/D-09.webp',
+    '/Portfolio/Images/D-10.webp'
   ]
 };
 
 const kellardenFarm: Artwork = {
   id: '1',
   title: 'Kellarden Farm',
-  imageUrl: '/Images/K_1.webp',
+  imageUrl: '/Portfolio/Images/K_1.webp',
   imageWidth: 500,
   imageHeight: 700,
   description: 'Brand identity proposal for Kellarden Farm, showcasing logo concepts, typography, color palette, and application mockups.',
@@ -48,12 +48,12 @@ const kellardenFarm: Artwork = {
   medium: 'Digital',
   dataAiHint: 'brand proposal',
   additionalImageUrls: [
-    '/Images/K_2.webp',
-    '/Images/K_3.webp',
-    '/Images/K_4.webp',
-    '/Images/K_6.webp',
-    '/Images/K_7.webp',
-    '/Images/K_8.webp',
+    '/Portfolio/Images/K_2.webp',
+    '/Portfolio/Images/K_3.webp',
+    '/Portfolio/Images/K_4.webp',
+    '/Portfolio/Images/K_6.webp',
+    '/Portfolio/Images/K_7.webp',
+    '/Portfolio/Images/K_8.webp',
   ],
   toolsUsed: ['Adobe Illustrator', 'Adobe Photoshop', 'Adobe InDesign'],
   showLogoSwitcher: true,
@@ -62,7 +62,7 @@ const kellardenFarm: Artwork = {
 const silverScreenZine: Artwork = {
   id: '2',
   title: 'Silver Screen',
-  imageUrl: '/Images/SS_1.webp',
+  imageUrl: '/Portfolio/Images/SS_1.webp',
   imageWidth: 1080,
   imageHeight: 864,
   description: "A special edition zine focusing on cinema, featuring an exclusive look at Godzilla. Winter 2023 special, celebrating the upcoming 70th anniversary of the original film's release.",
@@ -74,24 +74,24 @@ const silverScreenZine: Artwork = {
   medium: 'Print',
   toolsUsed: ['Adobe Photoshop', 'Adobe Indesign'],
   dataAiHint: 'zine page',
-  downloadablePdfUrl: '/zine/Godzillazine.pdf',
+  downloadablePdfUrl: '/Portfolio/zine/Godzillazine.pdf',
   additionalImageUrls: [
-    '/Images/SS_2.webp',
-    '/Images/SS_3.webp',
-    '/Images/SS_4.webp',
-    '/Images/SS_5.webp',
-    '/Images/SS_6.webp',
-    '/Images/SS_7.webp',
-    '/Images/SS_8.webp',
-    '/Images/SS_9.webp',
-    '/Images/SS_10.webp',
+    '/Portfolio/Images/SS_2.webp',
+    '/Portfolio/Images/SS_3.webp',
+    '/Portfolio/Images/SS_4.webp',
+    '/Portfolio/Images/SS_5.webp',
+    '/Portfolio/Images/SS_6.webp',
+    '/Portfolio/Images/SS_7.webp',
+    '/Portfolio/Images/SS_8.webp',
+    '/Portfolio/Images/SS_9.webp',
+    '/Portfolio/Images/SS_10.webp',
   ],
 };
 
 const youthSocietyEmblem: Artwork = {
   id: '7',
   title: 'Youth Society Emblem',
-  imageUrl: '/Images/YS_1.webp',
+  imageUrl: '/Portfolio/Images/YS_1.webp',
   imageWidth: 258,
   imageHeight: 258,
   description: 'A collection of emblem designs and mockups for "Youth Society," exploring variations in color and style on apparel. These logos aim to convey energy, community, and modern appeal.',
@@ -102,11 +102,11 @@ const youthSocietyEmblem: Artwork = {
   medium: 'Adobe Illustrator, Adobe Photoshop',
   dataAiHint: 'youth emblem mockup',
   additionalImageUrls: [
-    '/Images/YS_2.webp',
-    '/Images/YS_3.webp',
-    '/Images/YS_4.webp',
-    '/Images/YS_5.webp',
-    '/Images/YS_6.webp',
+    '/Portfolio/Images/YS_2.webp',
+    '/Portfolio/Images/YS_3.webp',
+    '/Portfolio/Images/YS_4.webp',
+    '/Portfolio/Images/YS_5.webp',
+    '/Portfolio/Images/YS_6.webp',
   ],
   toolsUsed: ['Adobe Illustrator', 'Adobe Photoshop'],
 };
@@ -114,7 +114,7 @@ const youthSocietyEmblem: Artwork = {
 const personalProjects: Artwork = {
   id: '9',
   title: 'Personal Projects',
-  imageUrl: '/Images/3D_1.webp',
+  imageUrl: '/Portfolio/Images/3D_1.webp',
   imageWidth: 800,
   imageHeight: 800,
   description: 'A collection of personal 3D works and passion projects.',
@@ -127,15 +127,15 @@ const personalProjects: Artwork = {
   toolsUsed: ['Blender', 'Adobe Photoshop'],
   dataAiHint: '3d abstract render',
   additionalImageUrls: [
-    '/Images/N64.webp'
+    '/Portfolio/Images/N64.webp'
   ],
 };
 
 const universityWork: Artwork = {
   id: '10',
   title: 'University',
-  imageUrl: '/Images/T_3.webp',
-  specialDetailImage: '/Images/wcu-icon-01.svg',
+  imageUrl: '/Portfolio/Images/T_3.webp',
+  specialDetailImage: '/Portfolio/Images/wcu-icon-01.svg',
   imageWidth: 600,
   imageHeight: 800,
   description: 'A collection of design projects completed during university studies, showcasing a range of skills and concepts.',
@@ -147,15 +147,15 @@ const universityWork: Artwork = {
   toolsUsed: ['Adobe Creative Suite', 'Blender', 'Cut Paper'],
   dataAiHint: 'university project design',
   additionalImageUrls: [
-    '/Images/RC_1.webp',
-    '/Images/RC_2.webp',
-    '/Images/RC_3.webp',
-    '/Images/RSP_1.webp',
-    '/Images/LSP_1.webp',
-    '/Images/LEGO_1.webp',
-    '/Images/LEGO_2.webp',
-    '/Images/T_1.webp',
-    '/Images/T_2.webp',
+    '/Portfolio/Images/RC_1.webp',
+    '/Portfolio/Images/RC_2.webp',
+    '/Portfolio/Images/RC_3.webp',
+    '/Portfolio/Images/RSP_1.webp',
+    '/Portfolio/Images/LSP_1.webp',
+    '/Portfolio/Images/LEGO_1.webp',
+    '/Portfolio/Images/LEGO_2.webp',
+    '/Portfolio/Images/T_1.webp',
+    '/Portfolio/Images/T_2.webp',
   ],
   additionalImageCaptions: [
     "This is a project created for a 3D art class. The objective was to design and construct a wood-cut food puzzle. I completed the design and construction of the puzzle with ease and wanted to create a real-world mockup of potential packaging. Inspired by Pulp Fiction I recreated the McDonald's burger container to fit the full built puzzle. The bottom of the packaging lists the film's cast as well as various facts and references.",
@@ -207,7 +207,7 @@ const templateArtwork: Artwork = {
   // Required fields
   id: 'UNIQUE_ID', // A unique number as a string (e.g., '11')
   title: 'Artwork Title', // Title of the project, can include <br /> for line breaks
-  imageUrl: '/Images/your-main-image.webp', // Path to the primary image for the artwork
+  imageUrl: '/Portfolio/Images/your-main-image.webp', // Path to the primary image for the artwork
   imageWidth: 800, // Natural width of the main image in pixels
   imageHeight: 600, // Natural height of the main image in pixels
   description: 'A detailed description of the artwork or project.',
@@ -223,8 +223,8 @@ const templateArtwork: Artwork = {
   dataAiHint: 'two keywords', // Hint for AI image generation (max 2 words, e.g., "abstract logo")
 
   additionalImageUrls: [
-    '/Images/additional-1.webp',
-    '/Images/additional-2.webp',
+    '/Portfolio/Images/additional-1.webp',
+    '/Portfolio/Images/additional-2.webp',
     // You can have as many as you need
   ],
   
@@ -236,16 +236,16 @@ const templateArtwork: Artwork = {
   
   imageCaption: 'A special caption that appears below the main image gallery.',
 
-  downloadablePdfUrl: '/path/to/your/document.pdf', // Link to a PDF file
+  downloadablePdfUrl: '/Portfolio/path/to/your/document.pdf', // Link to a PDF file
 
   // For interactive components, set to `true` to show them
   showLogoSwitcher: false, // Set to true for projects like Kellarden Farm
   showMotifSwitcher: false, // Set to true for projects like Durga Tea
 
   interactiveDisplay: {
-    contentImageUrl: '/Images/long-scrolling-mockup.webp' // For the scrollable mockup display
+    contentImageUrl: '/Portfolio/Images/long-scrolling-mockup.webp' // For the scrollable mockup display
   },
 
-  specialDetailImage: '/Images/detail-icon.svg', // An icon or small image for the corner accent
+  specialDetailImage: '/Portfolio/Images/detail-icon.svg', // An icon or small image for the corner accent
 };
 */
