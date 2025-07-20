@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
+  output: 'export', // Add this line for static HTML export
   images: {
     remotePatterns: [
       {
@@ -17,6 +17,9 @@ const nextConfig = {
       },
     ],
   },
+  // Optionally, if you're deploying to a subpath (e.g., your-username.github.io/your-repo-name)
+  // You might need to add a basePath:
+  // basePath: '/your-repo-name',
 };
 
 module.exports = nextConfig;
