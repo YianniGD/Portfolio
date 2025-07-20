@@ -2,7 +2,7 @@
 import { getArtworkById, getArtworks } from '../../../lib/artworkData';
 import ArtworkDetailClient from '../../../components/artwork/ArtworkDetailClient';
 import { notFound } from 'next/navigation';
-import type { Metadata, } from 'next';
+import type { Metadata, ResolvingMetadata } from 'next';
 import PageWrapper from '@/components/layout/PageWrapper';
 
 type Props = {
@@ -18,6 +18,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata(
   { params }: Props,
+  parent: ResolvingMetadata
 ): Promise<Metadata> {
   const artwork = await getArtworkById(params.id);
   if (!artwork) {
@@ -27,11 +28,15 @@ export async function generateMetadata(
   }
   const plainTitle = artwork.title.replace(/<br \/>/g, ' ');
   const plainDescription = artwork.description.replace(/<br \/>/g, ' ');
+  
+  // Create a fully qualified URL for the image
+  const imageUrl = new URL(artwork.imageUrl, (await parent).metadataBase || undefined).toString();
+
   return {
     title: `${plainTitle} | YGDesign`,
     description: plainDescription.substring(0, 150) || `Details for ${plainTitle}`,
     openGraph: {
-        images: [artwork.imageUrl],
+        images: [imageUrl],
     }
   };
 }

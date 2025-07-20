@@ -1,6 +1,22 @@
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/portfolio',
-  images: { unoptimized: true },
+  // Set the basePath to your repository name
+  // This is crucial for GitHub Pages deployment
+  basePath: process.env.NODE_ENV === 'production' ? '/ArtFolio' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/ArtFolio/' : '',
+  images: {
+    loader: 'custom',
+    loaderFile: './src/lib/imageLoader.js',
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'placehold.co',
+        port: '',
+        pathname: '/**',
+      },
+    ],
+  },
 };
+
 module.exports = nextConfig;

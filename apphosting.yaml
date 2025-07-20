@@ -1,0 +1,10 @@
+# Settings to manage and configure a Firebase App Hosting backend.
+# https://firebase.google.com/docs/app-hosting/configure
+
+runConfig:
+  # Increase this value if you'd like to automatically spin up
+  # more instances in response to increased traffic.
+  maxInstances: 1
+  # Concurrency can be adjusted to control how many requests
+  # a single instance can handle at once.
+  # concurrency: 80 # Example: Default is 80, adjust as needed

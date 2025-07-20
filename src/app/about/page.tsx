@@ -1,7 +1,7 @@
 
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import { Card, CardContent, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import PageWrapper from '@/components/layout/PageWrapper';
 
@@ -35,7 +35,7 @@ export default function AboutPage() {
           <section className="space-y-4">
             <h2 className="text-2xl font-semibold text-primary">My Journey</h2>
             <p className="text-foreground/80 leading-relaxed">
-              I&apos;m Yianni, a graphic designer and developer passionate about creating through collaboration. My enthusiasm for film is a significant influence when it comes to visual storytelling, shaping my work across all mediums. I firmly believe that learning as much as you can and dedicating attention to the finest detail are paramount to success. My strength lies in my comfort with technology and my proven ability to rapidly learn and leverage new software, ensuring efficient and impactful design solutions. I&apos;m always looking for projects that will help me improve my skills.
+              I'm Yianni, a graphic designer passionate about creating through collaboration. My enthusiasm for film is a significant influence when it comes to visual storytelling, shaping my work across all mediums. I firmly believe that learning as much as you can and dedicating attention to the finest detail are paramount to success. My strength lies in my comfort with technology and my proven ability to rapidly learn and leverage new software, ensuring efficient and impactful design solutions. I'm always looking for projects that will help me improve my skills.
             </p>
           </section>
           
@@ -51,7 +51,7 @@ export default function AboutPage() {
           <Separator />
 
           <section className="space-y-4">
-            <h2 className="text-2xl font-semibold text-primary">What You&apos;ll Find Here</h2>
+            <h2 className="text-2xl font-semibold text-primary">What You'll Find Here</h2>
             <p className="text-foreground/80 leading-relaxed">
               This platform showcases my personal brand, highlighting my passion for blending classic artistic principles with contemporary digital techniques.
             </p>

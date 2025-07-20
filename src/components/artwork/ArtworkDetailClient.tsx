@@ -3,7 +3,6 @@
 
 import { useState, useEffect, useMemo, useRef, useCallback } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import type { Artwork } from '@/types';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -238,8 +237,6 @@ export default function ArtworkDetailClient({ initialArtwork }: ArtworkDetailPro
                             src={url}
                             alt={`${plainArtworkTitle} - View ${index + 1}`}
                             fill
-                            objectFit="contain"
-                            unoptimized={true} // SVGs don't need optimization
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 800px"
                           />
                         </div>
@@ -299,16 +296,7 @@ export default function ArtworkDetailClient({ initialArtwork }: ArtworkDetailPro
                     src={mainImageUrl}
                     alt={`${plainArtworkTitle} - View 1`}
                     fill
-                    objectFit={
-                      (artwork.id === '9') ? "contain" :
-                      (artwork.id === miscUniversityWorkId && artwork.imageUrl.endsWith('.svg')) ? "contain" :
-                      (artwork.id === miscUniversityWorkId ) ? "cover" :
-                      "cover"
-                    }
-                    priority
-                    data-ai-hint={artwork.dataAiHint || 'artwork detail'}
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 800px"
-                    unoptimized={isAnySvgUrl(mainImageUrl) ? true : undefined}
                     className="pointer-events-none"
                     style={getImageTransformAndTransition(mainImageUrl, 0)}
                   />
@@ -379,7 +367,7 @@ export default function ArtworkDetailClient({ initialArtwork }: ArtworkDetailPro
                   {isAnySvgString(url) ? (
                     <div className="w-full h-full flex items-center justify-center" dangerouslySetInnerHTML={{ __html: url }} style={imageStyles} />
                   ) : (
-                    <Image src={url} alt={`${plainArtworkTitle} - View ${overallIndex + 1}`} fill objectFit={objectFit} priority={overallIndex < 2} data-ai-hint={artwork.dataAiHint || 'artwork detail'} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 800px" unoptimized={isAnySvgUrl(url) ? true : undefined} className="pointer-events-none" style={imageStyles} />
+                    <Image src={url} alt={`${plainArtworkTitle} - View ${overallIndex + 1}`} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 800px" className="pointer-events-none" style={imageStyles} />
                   )}
                 </div>
               </Card>
@@ -422,7 +410,7 @@ export default function ArtworkDetailClient({ initialArtwork }: ArtworkDetailPro
                                    {isAnySvgString(url) ? (
                                      <div className="w-full h-full flex items-center justify-center" dangerouslySetInnerHTML={{ __html: url }} style={imageStyles} />
                                    ) : (
-                                     <Image src={url} alt={`${plainArtworkTitle} - View ${overallIndex + 1}`} fill objectFit="cover" priority={overallIndex < 3} data-ai-hint={artwork.dataAiHint || 'artwork detail'} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 66vw, 800px" unoptimized={isAnySvgUrl(url) ? true : undefined} className="pointer-events-none group-hover:scale-105" style={imageStyles} />
+                                     <Image src={url} alt={`${plainArtworkTitle} - View ${overallIndex + 1}`} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 66vw, 800px" className="pointer-events-none group-hover:scale-105" style={imageStyles} />
                                    )}
                                  </div>
                                </CarouselItem>
@@ -477,7 +465,7 @@ export default function ArtworkDetailClient({ initialArtwork }: ArtworkDetailPro
                               {isAnySvgString(url) ? (
                                 <div className="w-full h-full flex items-center justify-center" dangerouslySetInnerHTML={{ __html: url }} style={imageStyles} />
                               ) : (
-                                <Image src={url} alt={`${plainArtworkTitle} - View ${overallIndex + 1}`} fill objectFit="cover" priority={overallIndex < 5} data-ai-hint={artwork.dataAiHint || 'artwork detail'} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 66vw, 800px" unoptimized={isAnySvgUrl(url) ? true : undefined} className="pointer-events-none group-hover:scale-105" style={imageStyles} />
+                                <Image src={url} alt={`${plainArtworkTitle} - View ${overallIndex + 1}`} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 66vw, 800px" className="pointer-events-none group-hover:scale-105" style={imageStyles} />
                               )}
                             </div>
                           </CarouselItem>
@@ -523,7 +511,7 @@ export default function ArtworkDetailClient({ initialArtwork }: ArtworkDetailPro
                               {isAnySvgString(url) ? (
                                 <div className="w-full h-full flex items-center justify-center" dangerouslySetInnerHTML={{ __html: url }} style={imageStyles} />
                               ) : (
-                                <Image src={url} alt={`${plainArtworkTitle} - View ${overallIndex + 1}`} fill objectFit="cover" priority={overallIndex < 7} data-ai-hint={artwork.dataAiHint || 'artwork detail'} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 66vw, 800px" unoptimized={isAnySvgUrl(url) ? true : undefined} className="pointer-events-none group-hover:scale-105" style={imageStyles} />
+                                <Image src={url} alt={`${plainArtworkTitle} - View ${overallIndex + 1}`} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 66vw, 800px" className="pointer-events-none group-hover:scale-105" style={imageStyles} />
                               )}
                             </div>
                           </CarouselItem>
@@ -569,7 +557,7 @@ export default function ArtworkDetailClient({ initialArtwork }: ArtworkDetailPro
                               {isAnySvgString(url) ? (
                                 <div className="w-full h-full flex items-center justify-center" dangerouslySetInnerHTML={{ __html: url }} style={imageStyles} />
                               ) : (
-                                <Image src={url} alt={`${plainArtworkTitle} - View ${overallIndex + 1}`} fill objectFit="cover" data-ai-hint={artwork.dataAiHint || 'artwork detail'} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 66vw, 800px" unoptimized={isAnySvgUrl(url) ? true : undefined} className="pointer-events-none group-hover:scale-105" style={imageStyles} />
+                                <Image src={url} alt={`${plainArtworkTitle} - View ${overallIndex + 1}`} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 66vw, 800px" className="pointer-events-none group-hover:scale-105" style={imageStyles} />
                               )}
                             </div>
                           </CarouselItem>
@@ -612,7 +600,7 @@ export default function ArtworkDetailClient({ initialArtwork }: ArtworkDetailPro
                         {isAnySvgString(url) ? (
                           <div className="w-full h-full flex items-center justify-center" dangerouslySetInnerHTML={{ __html: url }} style={imageStyles} />
                         ) : (
-                          <Image src={url} alt={`${plainArtworkTitle} - View ${overallIndex + 1}`} fill objectFit="cover" data-ai-hint={artwork.dataAiHint || 'artwork detail'} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 800px" unoptimized={isAnySvgUrl(url) ? true : undefined} className="pointer-events-none" style={imageStyles} />
+                          <Image src={url} alt={`${plainArtworkTitle} - View ${overallIndex + 1}`} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 800px" className="pointer-events-none" style={imageStyles} />
                         )}
                       </div>
                     </Card>
@@ -669,10 +657,10 @@ export default function ArtworkDetailClient({ initialArtwork }: ArtworkDetailPro
                     <h3 className="font-semibold text-foreground">Actions</h3>
                     <div className="flex flex-wrap gap-2">
                       <Button asChild variant="outline" className="flex-grow sm:flex-grow-0">
-                        <Link href={artwork.downloadablePdfUrl} target="_blank" rel="noopener noreferrer">
+                        <a href={artwork.downloadablePdfUrl} target="_blank" rel="noopener noreferrer">
                           <DownloadCloud className="mr-2 h-4 w-4" />
                           Read PDF
-                        </Link>
+                        </a>
                       </Button>
                     </div>
                   </div>
@@ -693,8 +681,6 @@ export default function ArtworkDetailClient({ initialArtwork }: ArtworkDetailPro
                   src={artwork.specialDetailImage}
                   alt={`${plainArtworkTitle} - detail accent`}
                   fill
-                  objectFit="contain"
-                  unoptimized={isAnySvgUrl(artwork.specialDetailImage) || isAnySvgString(artwork.specialDetailImage)}
                   className="transition-transform duration-300 group-hover:scale-110"
                   data-ai-hint="logo detail"
                 />

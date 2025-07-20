@@ -2,7 +2,6 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 export default function SiteFooter() {
@@ -27,25 +26,15 @@ export default function SiteFooter() {
         
         {/* Item 2: Navigation Links */}
         <nav className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-muted-foreground md:order-2 md:justify-start flex-1 md:mx-auto">
-          <Link href="/about" className="hover:text-foreground transition-colors">
+          <a href="/about" className="hover:text-foreground transition-colors">
             About
-          </Link>
-          <Link href="/style-guide" className="hover:text-foreground transition-colors">
+          </a>
+          <a href="/style-guide" className="hover:text-foreground transition-colors">
             Style Guide
-          </Link>
-          {isHomePage ? (
-            <button
-              onClick={handleScrollToTop}
-              className="hover:text-foreground transition-colors"
-              aria-label="Scroll to top"
-            >
-              Home
-            </button>
-          ) : (
-            <Link href="/" className="hover:text-foreground transition-colors">
-              Home
-            </Link>
-          )}
+          </a>
+          <a href="/" className="hover:text-foreground transition-colors">
+            Home
+          </a>
         </nav>
 
         {/* Item 3: Group for Social Icons and CBA Logo - pushed to the right on md screens */}

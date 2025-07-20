@@ -1,7 +1,7 @@
+
 "use client";
 
 import React from 'react';
-import Link from 'next/link';
 import { Phone, Mail } from 'lucide-react'; 
 import type { Artwork } from '@/types';
 import ArtworkGrid from '@/components/artwork/ArtworkGrid';
@@ -20,7 +20,7 @@ export default function HomePageClient({ initialArtworks }: HomePageClientProps)
 
           <main className="px-8 overflow-x-hidden">
             <section className="min-h-[85vh] flex flex-col justify-start items-start pt-20 md:pt-24"> {/* Adjusted min-height */}
-              <Link href="/about" className="group">
+              <a href="/about" className="group">
                 <div className="relative">
                   <h1
                     className="font-black leading-none text-foreground tracking-wide transition-colors duration-300 group-hover:text-primary"
@@ -35,7 +35,7 @@ export default function HomePageClient({ initialArtworks }: HomePageClientProps)
                     galiatsatos
                   </h2>
                 </div>
-              </Link>
+              </a>
             </section>
 
             {/* Artwork section starts after the hero section */}

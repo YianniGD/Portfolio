@@ -1,5 +1,4 @@
 
-import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { AlertTriangle } from 'lucide-react';
 
@@ -12,7 +11,7 @@ export default function NotFound() {
         Sorry, we couldn&apos;t find the artwork you&apos;re looking for.
       </p>
       <Button asChild>
-        <Link href="/">Return to Homepage</Link> 
+        <a href="/">Return to Homepage</a> 
       </Button>
     </div>
   );

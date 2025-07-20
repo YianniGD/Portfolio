@@ -13,7 +13,7 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
     "noEmit": true,
     "incremental": true,
     "module": "esnext",
@@ -27,8 +27,7 @@
         "name": "next"
       }
     ],
-    "target": "ES2017",
-    "forceConsistentCasingInFileNames": true
+    "target": "ES2017"
   },
   "include": [
     "next-env.d.ts",

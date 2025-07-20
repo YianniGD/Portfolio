@@ -2,7 +2,6 @@
 "use client";
 
 import Image from 'next/image';
-import Link from 'next/link';
 import type { Artwork } from '@/types';
 import { Card } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
@@ -17,7 +16,7 @@ function ArtworkCard({ artwork }: ArtworkCardProps) {
   const isLocalImage = typeof artwork.imageUrl === 'string' && artwork.imageUrl.startsWith('/');
 
   return (
-    <Link href={`/artworks/${artwork.id}`} aria-label={`View details for ${plainTitle}`} className="block group">
+    <a href={`/artworks/${artwork.id}`} aria-label={`View details for ${plainTitle}`} className="block group">
       <Card className="relative overflow-hidden rounded-lg shadow-md transition-shadow duration-300 ease-in-out">
         {/* Image Layer */}
         <div className={cn(
@@ -58,7 +57,7 @@ function ArtworkCard({ artwork }: ArtworkCardProps) {
           </p>
         </div>
       </Card>
-    </Link>
+    </a>
   );
 }
 

@@ -20,71 +20,55 @@ const ParticleBackground: React.FC = () => {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
 
+        class Particle {
+            x: number;
+            y: number;
+            size: number;
+            speedX: number;
+            speedY: number;
+            color: string;
 
-class Particle {
-    x: number;
-    y: number;
-    size: number;
-    speedX: number;
-    speedY: number;
-    color: string;
-    canvas: HTMLCanvasElement; // Add canvas property
-    ctx: CanvasRenderingContext2D; // Add ctx property
+            constructor(x: number, y: number, size: number, speedX: number, speedY: number, color: string) {
+                this.x = x;
+                this.y = y;
+                this.size = size;
+                this.speedX = speedX;
+                this.speedY = speedY;
+                this.color = color;
+            }
 
-    constructor(
-        x: number,
-        y: number,
-        size: number,
-        speedX: number,
-        speedY: number,
-        color: string,
-        canvas: HTMLCanvasElement, // Accept canvas in constructor
-        ctx: CanvasRenderingContext2D // Accept ctx in constructor
-    ) {
-        this.x = x;
-        this.y = y;
-        this.size = size;
-        this.speedX = speedX;
-        this.speedY = speedY;
-        this.color = color;
-        this.canvas = canvas; // Assign to property
-        this.ctx = ctx;       // Assign to property
-    }
+            update() {
+                if (this.x > canvas.width || this.x < 0) {
+                    this.speedX = -this.speedX;
+                }
+                if (this.y > canvas.height || this.y < 0) {
+                    this.speedY = -this.speedY;
+                }
+                this.x += this.speedX;
+                this.y += this.speedY;
+            }
 
-    update() {
-        // Use this.canvas directly
-        if (this.x > this.canvas.width || this.x < 0) {
-            this.speedX = -this.speedX;
+            draw() {
+                if (!ctx) return;
+                ctx.fillStyle = this.color;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
         }
-        if (this.y > this.canvas.height || this.y < 0) {
-            this.speedY = -this.speedY;
-        }
-        this.x += this.speedX;
-        this.y += this.speedY;
-    }
-
-    draw() {
-        // Use this.ctx directly
-        this.ctx.fillStyle = this.color;
-        this.ctx.beginPath();
-        this.ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        this.ctx.fill();
-    }
-}
 
         const init = () => {
-    particles = [];
-    const particleColor = theme === 'dark' ? 'rgba(255, 255, 255, 0.15)' : 'rgba(0, 0, 0, 0.15)';
-    for (let i = 0; i < particleCount; i++) {
-        const size = Math.random() * 1.5 + 0.5;
-        const x = Math.random() * canvas.width;
-        const y = Math.random() * canvas.height;
-        const speedX = (Math.random() * 0.4 - 0.2);
-        const speedY = (Math.random() * 0.4 - 0.2);
-        // Pass canvas and ctx here
-        particles.push(new Particle(x, y, size, speedX, speedY, particleColor, canvas, ctx));
-    }
-};
+            particles = [];
+            const particleColor = theme === 'dark' ? 'rgba(255, 255, 255, 0.15)' : 'rgba(0, 0, 0, 0.15)';
+            for (let i = 0; i < particleCount; i++) {
+                const size = Math.random() * 1.5 + 0.5;
+                const x = Math.random() * canvas.width;
+                const y = Math.random() * canvas.height;
+                const speedX = (Math.random() * 0.4 - 0.2);
+                const speedY = (Math.random() * 0.4 - 0.2);
+                particles.push(new Particle(x, y, size, speedX, speedY, particleColor));
+            }
+        };
 
         const animate = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);

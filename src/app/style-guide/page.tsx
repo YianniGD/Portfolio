@@ -148,7 +148,7 @@ export default function StyleGuidePage() {
                 And here is <a href="#typography" className="hover:underline">a sample link</a> to demonstrate hyperlink styling.
               </p>
               <blockquote>
-                This is a blockquote. It&apos;s typically used for highlighting a significant passage, a direct quote, or an important note.
+                This is a blockquote. It's typically used for highlighting a significant passage, a direct quote, or an important note.
                 The styling should make it distinct yet harmonious with the surrounding content.
               </blockquote>
               <ul className="list-disc pl-5 space-y-1">
@@ -174,9 +174,9 @@ export default function StyleGuidePage() {
               <CardHeader><CardTitle className="text-lg">Monospace (Roboto Mono)</CardTitle></CardHeader>
               <CardContent className="p-6">
                 <p className="font-mono text-sm">
-                  This text employs Roboto Mono. Ideal for &apos;code snippets&apos;, technical labels, or any content requiring a fixed-width typeface.
+                  This text employs Roboto Mono. Ideal for `code snippets`, technical labels, or any content requiring a fixed-width typeface.
                   <br />
-                  Example: `console.log(`&quot;Hello, Mono!`&quot;);`
+                  Example: `console.log("Hello, Mono!");`
                 </p>
               </CardContent>
             </Card>

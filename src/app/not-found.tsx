@@ -1,5 +1,4 @@
 
-import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { AlertTriangle } from 'lucide-react';
 
@@ -12,7 +11,7 @@ export default function NotFound() {
         Oops! The page you&apos;re looking for doesn&apos;t seem to exist. It might have been moved, deleted, or you might have mistyped the URL.
       </p>
       <Button asChild size="lg">
-        <Link href="/">Return to Homepage</Link>
+        <a href="/">Return to Homepage</a>
       </Button>
     </div>
   );

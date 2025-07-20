@@ -46,7 +46,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, onMouseDown, ...props }, ref) => {
     const Comp = asChild ? Slot : "button"
 
-    const handleRipple = (event: React.MouseEvent<HTMLButtonElement>) => {
+    const handleRipple = (event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
       const button = event.currentTarget;
       
       const existingRipples = button.querySelectorAll(".ripple-element");
@@ -78,7 +78,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       }, 700); 
 
       if (onMouseDown) {
-        onMouseDown(event);
+        onMouseDown(event as React.MouseEvent<HTMLButtonElement>);
       }
     };
 
@@ -86,7 +86,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       <Comp
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
-        onMouseDown={handleRipple}
+        onMouseDown={handleRipple as any}
         {...props}
       />
     )

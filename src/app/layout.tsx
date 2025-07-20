@@ -31,10 +31,11 @@ const robotoSlab = Roboto_Slab({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://yiannigd.github.io/ArtFolio'),
   title: 'YGDesign',
   description: 'A portfolio and artwork showcase application.',
   icons: {
-    icon: '/favicon.ico',
+    icon: '/ArtFolio/favicon.ico',
   },
   other: {
     'google-adsense-account': 'ca-pub-8169863200727481',

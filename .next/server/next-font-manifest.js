@@ -1,1 +1,1 @@
-self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{},\"appUsingSizeAdjust\":false,\"pagesUsingSizeAdjust\":false}"
+self.__NEXT_FONT_MANIFEST='{"pages":{},"app":{"/Users/yiannigaliatsatos/Documents/GitHub/Portfolio/src/app/layout":["static/media/141ea7318e415c63-s.p.woff2","static/media/b5c95a22b4347906-s.p.woff2","static/media/574741585039d06e-s.p.woff2","static/media/739c2d8941231bb4-s.p.woff2"]},"appUsingSizeAdjust":true,"pagesUsingSizeAdjust":false}';
