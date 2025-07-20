@@ -1,5 +1,0 @@
-{
-  "projects": {
-    "default": "artfolio-lg8he"
-  }
-}
