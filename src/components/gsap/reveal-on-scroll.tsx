@@ -44,14 +44,14 @@ const RevealOnScroll: React.FC<RevealOnScrollProps> = ({
     if (childrenToAnimate.length === 0) return;
 
     // Initial state (hidden) based on revealType
-    let initialVars: gsap.TweenVars = { opacity: 0 };
+    const tweenVars: any = { opacity: 0 };
     if (revealType === 'fadeInUp' || revealType === 'slideUp') {
-      initialVars.y = yOffset;
+      tweenVars.y = yOffset;
     }
     if (revealType === 'zoomIn') {
-      initialVars.scale = scaleOffset;
+      tweenVars.scale = scaleOffset;
     }
-    gsap.set(childrenToAnimate, initialVars);
+    gsap.set(childrenToAnimate, tweenVars);
 
     // Animation properties
     const animProps: gsap.TweenVars = {

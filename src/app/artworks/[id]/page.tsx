@@ -2,7 +2,7 @@
 import { getArtworkById, getArtworks } from '../../../lib/artworkData';
 import ArtworkDetailClient from '../../../components/artwork/ArtworkDetailClient';
 import { notFound } from 'next/navigation';
-import type { Metadata, ResolvingMetadata } from 'next';
+import type { Metadata, } from 'next';
 import PageWrapper from '@/components/layout/PageWrapper';
 
 type Props = {
@@ -18,7 +18,6 @@ export async function generateStaticParams() {
 
 export async function generateMetadata(
   { params }: Props,
-  parent: ResolvingMetadata
 ): Promise<Metadata> {
   const artwork = await getArtworkById(params.id);
   if (!artwork) {

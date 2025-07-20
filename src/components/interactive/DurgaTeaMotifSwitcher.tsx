@@ -2,11 +2,11 @@
 // src/components/interactive/DurgaTeaMotifSwitcher.tsx
 "use client";
 
-import { useState, useMemo } from 'react';
+import { useState, } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
-import { Palette, Check } from 'lucide-react'; // Added Check import
+import { Palette, } from 'lucide-react'; // Added Check import
 import { Separator } from '@/components/ui/separator';
 
 const motif1SvgString = `
